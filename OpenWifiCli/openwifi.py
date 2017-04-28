@@ -27,7 +27,7 @@ class openwifi:
 
         return ret
 
-    def commandFromString(cmd):
+    def commandFromString(self, cmd):
         cmdList = cmd.split(' ')
         return {'command' : cmdList[0],
                 'params'  : cmdList[1:]}
