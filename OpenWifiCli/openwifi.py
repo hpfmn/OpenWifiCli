@@ -22,7 +22,7 @@ class openwifi:
 
         for UUID in UUIDs:
             r = requests.post(self.getNodeURL()+'/'+UUID+'/exec',
-                              payload=command)
+                              data=json.dumps(command))
             ret.append(r.text)
 
         return ret
